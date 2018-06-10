@@ -21,13 +21,9 @@ function generateStudents(){
 	console.log(numberOfStudents);
 	var students = [];
 	for(var i = 0; i < numberOfStudents; i++){
-		var gender = chance.gender();
-		var birthYear = chance.year({min:1986, max:1996});
+		var gender = chance.animal();
 		students.push({
-			firstName: chance.first({gender:gender}),
-			lastName: chance.last(),
-			gender:gender,
-			birthday: chance.birthday({year: birthYear})
+			gender:gender
 		});
 	};
 	console.log(students);
